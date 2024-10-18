@@ -2,7 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-class Empleado(models.Model):
+class Proyecto(models.Model):
+    fechaInicio = models.DateField()
+    fechaTermino = models.DateField()
     nombre = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
-    fono = models.CharField(max_length=15)  
+    responsable = models.CharField(max_length=50)
+    prioridad = models.IntegerField()
